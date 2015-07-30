@@ -1,12 +1,11 @@
 package org.cytoscape.vsdl3c.internal.model;
 
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.shared.PrefixMapping;
 import org.cytoscape.model.CyIdentifiable;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.vsdl3c.internal.Util;
-
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.shared.PrefixMapping;
 
 /**
  * The SPARQL query template (parametric query) with its metadata in RDF

@@ -16,20 +16,16 @@ import static org.cytoscape.vsdl3c.internal.model.SPARQLQueryTemplate.NODE;
 import static org.cytoscape.vsdl3c.internal.model.SPARQLQueryTemplate.SPARQL_QUERY_TEMPLATE;
 import static org.cytoscape.vsdl3c.internal.model.SPARQLQuery.SPARQL_QUERY;
 
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.OutputStreamWriter;
 import java.util.Calendar;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.shared.PrefixMapping;
+import org.apache.jena.vocabulary.DC;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.junit.Test;
-
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.shared.PrefixMapping;
-import com.hp.hpl.jena.vocabulary.DC;
-import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.vocabulary.RDFS;
 
 public class MetadataTest {
 

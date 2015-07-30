@@ -1,13 +1,12 @@
 package org.cytoscape.vsdl3c.internal.model;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.StmtIterator;
+import org.apache.jena.vocabulary.DC;
+import org.apache.jena.vocabulary.RDFS;
 import org.cytoscape.vsdl3c.internal.Util;
-
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.vocabulary.DC;
-import com.hp.hpl.jena.vocabulary.RDFS;
 
 /**
  * The SPARQL query with its metadata in RDF

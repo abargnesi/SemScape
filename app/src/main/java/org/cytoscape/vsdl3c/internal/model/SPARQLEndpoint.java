@@ -1,17 +1,10 @@
 package org.cytoscape.vsdl3c.internal.model;
 
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.util.ResourceUtils;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.cytoscape.vsdl3c.internal.Util;
-
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.util.PrintUtil;
-import com.hp.hpl.jena.util.ResourceUtils;
-import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.vocabulary.RDFS;
 
 /**
  * The SPARQL endpoint with its metadata in RDF

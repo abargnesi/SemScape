@@ -22,6 +22,7 @@ import javax.swing.LayoutStyle;
 import javax.swing.WindowConstants;
 import javax.swing.border.TitledBorder;
 
+import org.apache.jena.shared.PrefixMapping;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.vsdl3c.internal.ContextManager;
 import org.cytoscape.vsdl3c.internal.SPARQLEndpointConfig;
@@ -29,8 +30,6 @@ import org.cytoscape.vsdl3c.internal.model.SPARQLEndpoint;
 import org.cytoscape.vsdl3c.internal.model.SPARQLQuery;
 import org.cytoscape.vsdl3c.internal.task.TransformTaskFactory;
 import org.cytoscape.work.swing.DialogTaskManager;
-
-import com.hp.hpl.jena.shared.PrefixMapping;
 
 /**
  * Dialog for SPARQL query

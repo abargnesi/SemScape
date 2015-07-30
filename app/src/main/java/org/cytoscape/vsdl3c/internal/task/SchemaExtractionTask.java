@@ -14,6 +14,12 @@ import java.util.Set;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.shared.PrefixMapping;
+import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
+import org.apache.jena.sparql.engine.http.QueryExceptionHTTP;
 import org.cytoscape.model.CyEdge;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNetworkFactory;
@@ -36,18 +42,6 @@ import org.cytoscape.work.TaskMonitor;
 import org.cytoscape.work.Tunable;
 import org.cytoscape.work.swing.DialogTaskManager;
 import org.cytoscape.work.util.ListMultipleSelection;
-
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.shared.PrefixMapping;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
-import com.hp.hpl.jena.sparql.engine.http.QueryExceptionHTTP;
 
 /**
  * Extract schema of the SPARQL endpoint(s), and transform it into a CyNetwork

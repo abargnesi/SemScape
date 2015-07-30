@@ -5,17 +5,16 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import org.apache.jena.query.QueryException;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.query.QuerySolution;
+import org.apache.jena.query.ResultSet;
+import org.apache.jena.rdf.model.RDFNode;
+import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 import org.cytoscape.vsdl3c.internal.Util;
 import org.cytoscape.vsdl3c.internal.model.SPARQLEndpoint;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-
-import com.hp.hpl.jena.query.QueryException;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 
 /**
  * Query the endpoint for its graph URI list

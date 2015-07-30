@@ -5,29 +5,18 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
-import java.util.Calendar;
-import java.util.HashMap;
-import java.util.HashSet;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Properties;
-import java.util.Set;
 
 import javax.swing.SwingUtilities;
 
+import org.apache.jena.datatypes.xsd.XSDDateTime;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.vocabulary.RDF;
 import org.cytoscape.property.CyProperty;
 import org.cytoscape.property.PropertyUpdatedEvent;
 import org.cytoscape.property.PropertyUpdatedListener;
 import org.cytoscape.vsdl3c.internal.model.SPARQLQuery;
-import org.cytoscape.vsdl3c.internal.ui.SPARQLEndpointConfigPanel;
-
-import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
  * A context is a package containing the SPARQL queries and their metadata for a

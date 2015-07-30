@@ -1,20 +1,10 @@
 package org.cytoscape.vsdl3c.internal;
 
 import java.io.File;
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.io.InputStreamReader;
-import java.io.UnsupportedEncodingException;
-import java.util.HashMap;
 import java.util.HashSet;
 
 import org.cytoscape.property.AbstractConfigDirPropsReader;
 import org.cytoscape.property.CyProperty;
-import org.cytoscape.property.PropertyUpdatedEvent;
-import org.cytoscape.property.PropertyUpdatedListener;
-
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
 
 /**
  * During initialization of the plugin bundle, it loads the settings into

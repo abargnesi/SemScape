@@ -1,17 +1,11 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
     <parent>
-		<artifactId>vsdl3c-parent</artifactId>
+	<artifactId>vsdl3c-parent</artifactId>
         <groupId>org.cytoscape</groupId>
         <version>1.0.5</version>
     </parent>
-    <properties>
-		<!-- cytoscape.api.version>3.0.0-beta2-SNAPSHOT</cytoscape.api.version -->
-		<!--  osgi.api.version>4.2.0</osgi.api.version -->
-		<!--  cytoscape.api.version>3.0.0-beta3-SNAPSHOT</cytoscape.api.version -->
-		<!--  cytoscape.impl.version>3.0.0-alpha10-SNAPSHOT</cytoscape.impl.version -->
-    </properties>
-    
+
 	<groupId>org.cytoscape</groupId>
 	<artifactId>vsdl3c-app</artifactId>
 	<packaging>bundle</packaging>
@@ -25,13 +19,14 @@
 				<extensions>true</extensions>
 				<configuration>
 					<instructions>
+						<Bundle-Name>${project.name}</Bundle-Name>
 						<Bundle-SymbolicName>${bundle.symbolicName}</Bundle-SymbolicName>
 						<Bundle-Version>${project.version}</Bundle-Version>
-						<!--  Export-Package>${bundle.namespace}.*</Export-Package -->
-						<!--  Private-Package>${bundle.namespace}.internal.*</Private-Package -->
 						<Bundle-Activator>${bundle.namespace}.internal.CyActivator</Bundle-Activator>
+						<Embed-Dependency>*;scope=!provided|test;groupId=!org.cytoscape</Embed-Dependency>
+						<Embed-Transitive>true</Embed-Transitive>
 						<Export-Package>!*</Export-Package>
-						<Import-Package>*;resolution:=optional,javax.management</Import-Package>
+						<Import-Package>*;resolution:=optional</Import-Package>
 					</instructions>
 				</configuration>
 			</plugin>
@@ -39,36 +34,6 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>2.3.2</version>
 			</plugin>
-			
-			<plugin>
-        		<groupId>org.apache.maven.plugins</groupId>
-        		<artifactId>maven-shade-plugin</artifactId>
-        		<version>2.0</version>
-        		<executions>
-         			<execution>
-            			<phase>package</phase>
-            			<goals>
-              				<goal>shade</goal>
-            			</goals>
-            			<configuration>
-            				<filters>
-        						<filter>
-            						<artifact>*:*</artifact>
-            							<excludes>
-                							<exclude>META-INF/*.SF</exclude>
-                							<exclude>META-INF/*.DSA</exclude>
-                							<exclude>META-INF/*.RSA</exclude>
-            							</excludes>
-        						</filter>
-    						</filters>
-          					<!-- put your configurations here -->
-          					<finalName>semScape</finalName>
-          				</configuration>
-          			</execution>
-        		</executions>
-      		</plugin>	 
 		</plugins>
 	</build>
-
-
 </project>

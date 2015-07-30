@@ -12,18 +12,17 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+import org.apache.jena.rdf.model.Model;
+import org.apache.jena.rdf.model.ModelFactory;
+import org.apache.jena.rdf.model.ResIterator;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.util.PrintUtil;
+import org.apache.jena.vocabulary.RDF;
+import org.apache.jena.vocabulary.RDFS;
 import org.cytoscape.application.events.CyShutdownEvent;
 import org.cytoscape.application.events.CyShutdownListener;
 import org.cytoscape.property.CyProperty;
 import org.cytoscape.vsdl3c.internal.model.SPARQLEndpoint;
-
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.util.PrintUtil;
-import com.hp.hpl.jena.vocabulary.RDF;
-import com.hp.hpl.jena.vocabulary.RDFS;
 
 /**
  * The configuration of SPARQL endpoints defined in

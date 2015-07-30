@@ -15,18 +15,13 @@ import javax.swing.JButton;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 
+import org.apache.jena.datatypes.xsd.XSDDateTime;
+import org.apache.jena.rdf.model.*;
 import org.cytoscape.property.CyProperty;
 import org.cytoscape.vsdl3c.internal.ContextManager;
 import org.cytoscape.vsdl3c.internal.Util;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-
-import com.hp.hpl.jena.datatypes.xsd.XSDDateTime;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
 
 /**
  * Check for update of the context, by comparing the timestamp of the publication time.
@@ -68,13 +63,10 @@ public class CheckForUpdateTask extends AbstractTask {
 		FileOutputStream writer = new FileOutputStream(contextTarGzip);
 		byte[] buffer = new byte[1024];
 
-		int totalBytesRead = 0;
-		int bytesRead = 0;
-
+		int bytesRead;
 		while ((bytesRead = reader.read(buffer)) > 0) {
 			writer.write(buffer, 0, bytesRead);
 			buffer = new byte[1024];
-			totalBytesRead += bytesRead;
 		}
 		writer.close();
 		reader.close();

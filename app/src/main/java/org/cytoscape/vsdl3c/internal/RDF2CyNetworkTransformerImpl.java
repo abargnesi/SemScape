@@ -2,14 +2,14 @@ package org.cytoscape.vsdl3c.internal;
 
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 import java.util.Map.Entry;
-import java.util.Properties;
 
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.shared.PrefixMapping;
+import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
+import org.apache.jena.vocabulary.RDF;
 import org.cytoscape.model.CyEdge;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNetworkFactory;
@@ -17,17 +17,6 @@ import org.cytoscape.model.CyNode;
 import org.cytoscape.session.CyNetworkNaming;
 import org.cytoscape.vsdl3c.RDF2CyNetworkTransformer;
 import org.cytoscape.vsdl3c.internal.model.SPARQLEndpoint;
-
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.rdf.model.Literal;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.rdf.model.StmtIterator;
-import com.hp.hpl.jena.shared.PrefixMapping;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
-import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
  * Implementation of RDF2CyNetworkTransformer

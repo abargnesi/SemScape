@@ -30,6 +30,13 @@ import org.apache.commons.compress.archivers.ArchiveStreamFactory;
 import org.apache.commons.compress.archivers.tar.TarArchiveEntry;
 import org.apache.commons.compress.archivers.tar.TarArchiveInputStream;
 import org.apache.commons.compress.utils.IOUtils;
+import org.apache.jena.query.QueryExecutionFactory;
+import org.apache.jena.rdf.model.Property;
+import org.apache.jena.rdf.model.Resource;
+import org.apache.jena.rdf.model.ResourceFactory;
+import org.apache.jena.shared.PrefixMapping;
+import org.apache.jena.shared.impl.PrefixMappingImpl;
+import org.apache.jena.sparql.engine.http.QueryEngineHTTP;
 import org.cytoscape.model.CyEdge;
 import org.cytoscape.model.CyNetwork;
 import org.cytoscape.model.CyNode;
@@ -37,14 +44,6 @@ import org.cytoscape.view.vizmap.VisualMappingManager;
 import org.cytoscape.view.vizmap.VisualStyle;
 import org.cytoscape.vsdl3c.internal.model.GraphPolicy;
 import org.cytoscape.vsdl3c.internal.model.SPARQLEndpoint;
-
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.rdf.model.Property;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.ResourceFactory;
-import com.hp.hpl.jena.shared.PrefixMapping;
-import com.hp.hpl.jena.shared.impl.PrefixMappingImpl;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class Util {
 
@@ -156,7 +155,7 @@ public class Util {
 	 * @return the namesapce of the URI
 	 */
 	public static String getNamespace(String uri) {
-		int split = com.hp.hpl.jena.rdf.model.impl.Util.splitNamespace(uri);
+		int split = org.apache.jena.rdf.model.impl.Util.splitNamespaceXML(uri);
 		String ns = uri.substring(0, split);
 		return ns;
 	}

@@ -3,6 +3,7 @@ package org.cytoscape.vsdl3c.internal;
 import java.io.File;
 import java.util.Properties;
 
+import org.apache.jena.shared.PrefixMapping;
 import org.cytoscape.application.CyApplicationConfiguration;
 import org.cytoscape.application.CyApplicationManager;
 import org.cytoscape.application.events.CyShutdownListener;
@@ -40,8 +41,6 @@ import org.cytoscape.work.TaskFactory;
 import org.cytoscape.work.TaskIterator;
 import org.cytoscape.work.swing.DialogTaskManager;
 import org.osgi.framework.BundleContext;
-
-import com.hp.hpl.jena.shared.PrefixMapping;
 
 public class CyActivator extends AbstractCyActivator {
 	public CyActivator() {

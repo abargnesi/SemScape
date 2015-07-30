@@ -12,6 +12,8 @@ import java.util.List;
 
 import javax.swing.JOptionPane;
 
+import org.apache.jena.rdf.model.*;
+import org.apache.jena.vocabulary.RDF;
 import org.cytoscape.property.CyProperty;
 import org.cytoscape.vsdl3c.internal.ContextManager;
 import org.cytoscape.vsdl3c.internal.SPARQLEndpointConfig;
@@ -20,13 +22,6 @@ import org.cytoscape.vsdl3c.internal.ui.ContextSynchronizerPanel;
 import org.cytoscape.vsdl3c.internal.ui.SPARQLEndpointConfigPanel;
 import org.cytoscape.work.AbstractTask;
 import org.cytoscape.work.TaskMonitor;
-
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.ResIterator;
-import com.hp.hpl.jena.rdf.model.Resource;
-import com.hp.hpl.jena.rdf.model.Statement;
-import com.hp.hpl.jena.vocabulary.RDF;
 
 /**
  * Add a new context from remote publication URI
@@ -64,13 +59,10 @@ public class AddContextTask extends AbstractTask {
 		FileOutputStream writer = new FileOutputStream(contextTarGzip);
 		byte[] buffer = new byte[1024];
 
-		int totalBytesRead = 0;
-		int bytesRead = 0;
-
+		int bytesRead;
 		while ((bytesRead = reader.read(buffer)) > 0) {
 			writer.write(buffer, 0, bytesRead);
 			buffer = new byte[1024];
-			totalBytesRead += bytesRead;
 		}
 		writer.close();
 		reader.close();

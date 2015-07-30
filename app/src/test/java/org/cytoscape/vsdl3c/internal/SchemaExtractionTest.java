@@ -4,15 +4,6 @@ import java.util.ArrayList;
 
 import org.junit.Test;
 
-import com.hp.hpl.jena.query.QueryExecution;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QuerySolution;
-import com.hp.hpl.jena.query.ResultSet;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.rdf.model.ModelFactory;
-import com.hp.hpl.jena.rdf.model.RDFNode;
-import com.hp.hpl.jena.util.PrintUtil;
-
 public class SchemaExtractionTest {
 	private static String SERVICE = "http://ops-virtuoso.scai.fraunhofer.de:8891/sparql";
 

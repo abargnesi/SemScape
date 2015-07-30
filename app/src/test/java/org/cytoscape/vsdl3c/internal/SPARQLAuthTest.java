@@ -1,14 +1,6 @@
 package org.cytoscape.vsdl3c.internal;
 
-import junit.framework.TestCase;
-
 import org.junit.Test;
-
-import com.hp.hpl.jena.query.Query;
-import com.hp.hpl.jena.query.QueryExecutionFactory;
-import com.hp.hpl.jena.query.QueryFactory;
-import com.hp.hpl.jena.rdf.model.Model;
-import com.hp.hpl.jena.sparql.engine.http.QueryEngineHTTP;
 
 public class SPARQLAuthTest {
 
